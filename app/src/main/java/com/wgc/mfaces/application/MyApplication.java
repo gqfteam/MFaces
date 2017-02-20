@@ -2,6 +2,7 @@ package com.wgc.mfaces.application;
 
 import android.app.Application;
 
+import com.wgc.mfaces.constant.Constant;
 import com.zhy.http.okhttp.OkHttpUtils;
 
 import java.util.concurrent.TimeUnit;
@@ -12,8 +13,8 @@ import okhttp3.OkHttpClient;
 public class MyApplication extends Application
 {
     public static String JPtag="";
-    public static String master_Secret = "df28ac8cc76b4a43daa68fca";
-    public static  String appKey = "8a867f6ac13f0d52eb6017f3";
+    public static String master_Secret = Constant.Jpush_MasterSecret;
+    public static  String appKey = Constant.Jpush_AppKey;
     @Override
     public void onCreate()
     {
