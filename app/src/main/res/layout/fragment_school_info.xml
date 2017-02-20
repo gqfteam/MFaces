@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+<!--    头部标题-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:background="@color/blueColor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp">
+
+        <TextView
+            android:id="@+id/schoolinfo_top_address_tv"
+            android:layout_width="@dimen/four_height_item"
+            android:layout_height="@dimen/four_height_item"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="洛阳"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_txt_size" />
+
+        <ImageView
+            android:id="@+id/schoolinfo_top_address_iv"
+            android:layout_width="@dimen/five_height_item"
+            android:layout_height="@dimen/five_height_item"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/ic_action_map1" />
+
+        <com.wgc.mfaces.view.SearchView
+            android:id="@+id/schoolinfo_top_search_sv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/four_height_item"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/one_margin_item"
+            android:paddingTop="@dimen/one_margin_item"></com.wgc.mfaces.view.SearchView>
+
+        <ImageView
+            android:id="@+id/schoolinfo_top_qcord_iv"
+            android:layout_width="@dimen/five_height_item"
+            android:layout_height="@dimen/five_height_item"
+            android:background="@mipmap/actionbar_icon_scan" />
+
+        <ImageView
+            android:id="@+id/schoolinfo_top_chat_iv"
+            android:layout_width="@dimen/five_height_item"
+            android:layout_height="@dimen/five_height_item"
+            android:layout_marginLeft="@dimen/one_margin_item"
+            android:layout_marginRight="@dimen/one_margin_item"
+            android:background="@mipmap/actionbar_icon_scan" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/schoolinfo_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<!--学校介绍图片-->
+        <com.wgc.mfaces.view.CarouselView
+            android:id="@+id/schoolinfo_top_carousel_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/max_height_item" />
+        <!--网格布局-->
+        <include
+            android:id="@+id/schoolinfo_top_gridview_include"
+            layout="@layout/schoolinfo_radiogroup" />
+
+        <!--外部链接  燎原网-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/max_height_item"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/schoolinfo_top_netliaoyuan_iv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@mipmap/liaoyuanwang" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/two_margin_item"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/schoolinfo_top_netliangxueyizuo_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/twoandthree_height_item"
+                    android:layout_marginBottom="@dimen/two_margin_item"
+                    android:background="@mipmap/liangxueyizuo" />
+
+                <ImageView
+                    android:id="@+id/schoolinfo_top_netsanyansanshi_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/twoandthree_height_item"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/schoolinfo_top_netliangxueyizuo_iv"
+                    android:background="@mipmap/sanyansanshi" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+<!--最近新闻-->
+        <include
+            android:id="@+id/schoolinfo_moddle_newslist_include"
+            layout="@layout/schoolinfo_verticalscrolltextview" />
+
+        <!--最近通知 校园媒体-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/schoolinfo_moddle_newstitle_rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/blueColor"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/schoolinfo_moddle_noticetitle_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/two_margin_item"
+                    android:button="@null"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:background="@drawable/rb_schoolinfo_notice_corners_bg"
+                    android:textColor="@color/white"
+                    android:text="@string/schoolinfo_recernt_notice"
+                    android:layout_margin="@dimen/three_margin_item"
+                    />
+
+                <RadioButton
+                    android:id="@+id/schoolinfo_moddle_mediatitle_rb"
+                    android:layout_width="wrap_content"
+                    android:button="@null"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/two_margin_item"
+                    android:background="@drawable/rb_schoolinfo_notice_corners_bg"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schoolinfo_campus_media" />
+
+            </RadioGroup>
+           <!-- 通知列表-->
+            <ListView
+                android:id="@+id/schoolinfo_moddle_infolist_lv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxmax_height_item">
+            </ListView>
+
+    </LinearLayout>
+    <include
+        android:id="@+id/schoolinfo_bottom_common_con"
+
+        layout="@layout/schoolinfo_bottom_common_connection"/>
+
+        <include android:id="@+id/schoolinfo_bottom_school_details_ll"
+            layout="@layout/schoolinfo_bottom_school_details"/>
+</LinearLayout>
+
+    </ScrollView>
+
+
+    </LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--JYQ-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <!-- top切换 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/blueColor">
+        <TextView
+            android:id="@+id/signinLlist_top_back_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/ic_comment_photo_browser_back"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"/>
+        <RadioGroup
+            android:id="@+id/signinList_top_selectList_radioGroup"
+            android:layout_width="@dimen/max_height_item"
+            android:layout_height="@dimen/five_height_item"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/contact_top_radgrop_shap"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/signinList_top_temporary_radioButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/contact_top_rad_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="临时"
+                android:textColor="@color/color_redio_blue_white"
+                android:textSize="@dimen/small_txt_size"/>
+            <RadioButton
+                android:id="@+id/signinList_top_daily_radioButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/contact_top_rad_right"
+                android:button="@null"
+                android:gravity="center"
+                android:text="日常"
+                android:textColor="@color/color_redio_blue_white"
+                android:textSize="@dimen/small_txt_size"/>
+        </RadioGroup>
+        <TextView
+            android:id="@+id/signinLlist_top_edit_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/signinlist_edit"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"/>
+    </RelativeLayout>
+
+    <!-- 内容部分碎片 -->
+    <FrameLayout
+        android:id="@+id/signinlist" android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="@color/white"></FrameLayout>
+</LinearLayout>

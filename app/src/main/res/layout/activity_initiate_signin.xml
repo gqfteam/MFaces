@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- lyt  发起签到-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wgc.mfaces.activity.InitiateSigninActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/blueColor">
+
+        <TextView
+            android:id="@+id/initialsignin_top_back_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/initialsignin_top_text_return"
+            android:drawableLeft="@mipmap/ic_comment_photo_browser_back"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin" />
+
+
+
+        <RadioGroup
+            android:layout_width="@dimen/max_height_item"
+            android:layout_height="@dimen/five_height_item"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/contact_top_radgrop_shap"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/contact_top_msg_rad"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/contact_top_rad_left"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/initialsignin_top_navigation_left"
+                android:textColor="@color/color_redio_blue_white"
+                android:textSize="@dimen/small_txt_size" />
+
+            <RadioButton
+                android:id="@+id/contact_top_friend_rad"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/contact_top_rad_right"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/initialsignin_top_navigation_right"
+                android:textColor="@color/color_redio_blue_white"
+                android:textSize="@dimen/small_txt_size" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/two_margin_item">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/red"
+            android:textSize="@dimen/medium_txt_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/one_margin_item"
+            android:text="@string/initialsignin_top_signinscope_txt"
+            android:textSize="@dimen/medium_txt_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/initialsignin_top_scope_radio_one"
+                    style="@style/initialsigninpage_radiobutton"
+                    android:layout_marginLeft="@dimen/two_margin_item"
+                    android:background="@drawable/initialsignin_top_search_selector"
+                    android:text="@string/initialsignin_top_signinscope_twinty"
+                    android:textColor="@color/initialsignin_top_searchtext_selector" />
+
+                <RadioButton
+
+                    android:id="@+id/initialsignin_top_scope_radio_two"
+                    style="@style/initialsigninpage_radiobutton"
+                    android:layout_marginLeft="@dimen/one_margin_item"
+                    android:background="@drawable/initialsignin_top_search_selector"
+                    android:checked="true"
+                    android:text="@string/initialsignin_top_signinscope_thirty"
+                    android:textColor="@color/initialsignin_top_searchtext_selector" />
+
+                <RadioButton
+                    android:id="@+id/initialsignin_top_scope_radio_three"
+                    style="@style/initialsigninpage_radiobutton"
+                    android:layout_marginLeft="@dimen/one_margin_item"
+                    android:background="@drawable/initialsignin_top_search_selector"
+                    android:text="@string/initialsignin_top_signinscope_forty"
+                    android:textColor="@color/initialsignin_top_searchtext_selector" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="@dimen/four_height_item"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/two_margin_item"
+                    android:paddingLeft="@dimen/one_margin_item"
+                    android:background="@drawable/initialsignin_top_search_edittext"
+                    android:hint="@string/initialsignin_top_signin_other"
+                    android:inputType="number"
+                    android:textSize="@dimen/small_txt_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/initialsignin_top_meter" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/two_margin_item">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/red"
+            android:textSize="@dimen/medium_txt_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/one_margin_item"
+            android:text="@string/initialsignin_top_signinstime_txt"
+            android:textSize="@dimen/medium_txt_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/initialsignin_top_signintime_radio_one"
+                    style="@style/initialsigninpage_radiobutton"
+                    android:layout_marginLeft="@dimen/two_margin_item"
+                    android:background="@drawable/initialsignin_top_signintime_selector"
+                    android:checked="true"
+                    android:text="@string/initialsignin_top_signintime_twinty"
+                    android:textColor="@color/initialsignin_top_searchtext_selector" />
+
+                <RadioButton
+                    android:id="@+id/initialsignin_top_signintime_radio_two"
+                    style="@style/initialsigninpage_radiobutton"
+                    android:layout_marginLeft="@dimen/one_margin_item"
+                    android:background="@drawable/initialsignin_top_signintime_selector"
+                    android:text="@string/initialsignin_top_signintime_thirty"
+                    android:textColor="@color/initialsignin_top_searchtext_selector" />
+
+                <RadioButton
+                    android:id="@+id/initialsignin_top_signintime_radio_three"
+                    style="@style/initialsigninpage_radiobutton"
+                    android:layout_marginLeft="@dimen/one_margin_item"
+                    android:background="@drawable/initialsignin_top_signintime_selector"
+                    android:text="@string/initialsignin_top_signintime_forty"
+                    android:textColor="@color/initialsignin_top_searchtext_selector" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="@dimen/four_height_item"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/two_margin_item"
+                    android:paddingLeft="@dimen/one_margin_item"
+                    android:background="@drawable/initialsignin_top_search_edittext"
+                    android:hint="@string/initialsignin_top_signin_other"
+                    android:inputType="number"
+                    android:textSize="@dimen/small_txt_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/initialsignin_top_minute" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/two_margin_item">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/red"
+            android:textSize="@dimen/medium_txt_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/one_margin_item"
+            android:text="@string/initialsignin_top_signinlocal_txt"
+            android:textSize="@dimen/medium_txt_size" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/two_margin_item"
+            android:layout_marginRight="@dimen/five_height_item"
+            android:background="@drawable/initialsignin_top_search_edittext"
+            android:gravity="left|top"
+            android:paddingLeft="@dimen/one_margin_item"
+            android:hint="@string/initialsignin_top_local_hint"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:textSize="@dimen/small_txt_size" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/two_margin_item">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_txt_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/one_margin_item"
+            android:text="@string/initialsignin_top_signinspurpose_txt"
+            android:textSize="@dimen/medium_txt_size" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_height_item"
+            android:layout_marginLeft="@dimen/two_margin_item"
+            android:layout_marginRight="@dimen/five_height_item"
+            android:paddingLeft="@dimen/one_margin_item"
+            android:background="@drawable/initialsignin_top_search_off"
+            android:gravity="left|top"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:textSize="@dimen/small_txt_size" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/one_margin_item"
+        android:layout_marginRight="@dimen/one_margin_item"
+        android:background="#D7D7D7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/two_margin_item">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/initialsignin_middle_btn_add"
+            android:paddingBottom="@dimen/one_margin_item"
+            android:paddingLeft="@dimen/two_margin_item"
+            android:paddingRight="@dimen/two_margin_item"
+            android:paddingTop="@dimen/one_margin_item"
+            android:text="添加分组"
+            android:textColor="@color/white"
+            android:textSize="@dimen/minimum_txt_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/one_margin_item"
+            android:background="@drawable/initialsignin_middle_btn_delete"
+            android:paddingBottom="@dimen/one_margin_item"
+            android:paddingLeft="@dimen/two_margin_item"
+            android:paddingRight="@dimen/two_margin_item"
+            android:paddingTop="@dimen/one_margin_item"
+            android:text="删除分组"
+            android:textColor="@color/white"
+            android:textSize="@dimen/minimum_txt_size" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/initialsignin_bottom_showclass_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/two_margin_item"
+        android:paddingTop="@dimen/two_margin_item">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/two_margin_item"
+            android:paddingRight="@dimen/two_margin_item">
+
+            <TextView
+                android:id="@+id/initialsignin_bottom_initialsignin_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/initialsignin_bottom_btn_ok_pressed"
+                android:gravity="center"
+                android:paddingBottom="@dimen/two_margin_item"
+                android:paddingTop="@dimen/two_margin_item"
+                android:text="发起签到"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_txt_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/two_margin_item"
+            android:paddingRight="@dimen/two_margin_item">
+
+            <TextView
+                android:id="@+id/initialsignin_bottom_cancel_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/initialsignin_bottom_btn_cancel_pressed"
+                android:gravity="center"
+                android:paddingBottom="@dimen/two_margin_item"
+                android:paddingTop="@dimen/two_margin_item"
+                android:text="取   消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_txt_size" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

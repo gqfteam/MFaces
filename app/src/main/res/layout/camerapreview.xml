@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cccccc"
+    android:orientation="vertical" >
+	<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical" >
+    <SurfaceView
+        android:id="@+id/camera_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.example.dell.imooc_jpushdemo.FaceMask
+        android:id="@+id/mask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </com.example.dell.imooc_jpushdemo.FaceMask>
+	</RelativeLayout>
+	<ImageView 
+	    android:layout_width="70dp"
+	    android:layout_height="100dp"
+	    android:id="@+id/gqf"
+	    android:background="#ffffff"
+	    />
+</LinearLayout>

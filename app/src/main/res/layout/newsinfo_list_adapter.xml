@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/one_margin_item"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/newsinfo_news_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/four_margin_item"
+        android:textSize="@dimen/medium_txt_size"
+        android:text="aaaaa"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/newsinfo_left_news_iv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:layout_height="@dimen/three_height_item" />
+        <ImageView
+            android:id="@+id/newsinfo_moddle_news_iv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/one_margin_item"
+            android:layout_marginRight="@dimen/one_margin_item"
+            android:background="@color/black"
+            android:layout_height="@dimen/three_height_item" />
+        <ImageView
+            android:id="@+id/newsinfo_right_news_iv"
+            android:layout_width="0dp"
+            android:background="@color/black"
+            android:layout_weight="1"
+            android:layout_height="@dimen/three_height_item" />
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/newsinfo_left_news_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bbbb"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/minimum_txt_size"
+            />
+
+        <TextView
+            android:id="@+id/newsinfo_right_news_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bbbb"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/minimum_txt_size"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

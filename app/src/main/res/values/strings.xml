@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">MFaces</string>
+    <!-- 春   首页 学校信息-->
+    <string name="tools_user_nickname">微微一笑</string>
+    <string name="tools_user_class">软工132班</string>
+    <!-- 春   首页 学校信息-->
+    <string name="schoolinfo_net_teaching">网络教学中心</string>
+    <string name="schoolinfo_wisdom_teaching_engineering">智慧学工</string>
+    <string name="schoolinfo_net_service">网络服务</string>
+    <string name="schoolinfo_free_classroom">空闲教室</string>
+    <string name="schoolinfo_office_phone">办公电话</string>
+    <string name="schoolinfo_classinfo">课表信息</string>
+    <string name="schoolinfo_score_search">成绩查询</string>
+    <string name="schoolinfo_card_service">一卡通服务</string>
+    <string name="schoolinfo_calendar">校历</string>
+    <string name="schoolinfo_graduation_procedures">离校手续</string>
+    <string name="schoolinfo_school_news">校园新闻</string>
+    <string name="schoolinfo_recernt_notice">最近通知</string>
+    <string name="schoolinfo_campus_media">校园媒体</string>
+    <string name="schoolinfo_common_connection">常用链接</string>
+    <string name="schoolinfo_campus_train">校园直通车 >></string>
+    <string name="schoolinfo_school_map">校园地图 >></string>
+    <string name="schoolinfo_peripheral_traffic">周边交通 >></string>
+    <string name="schoolinfo_campus_advertisement">校园广告 >></string>
+    <string name="schoolinfo_practical_information">实用信息 >></string>
+    <string name="schoolinfo_alumni_club">校友总汇 >></string>
+    <string name="schoolinfo_school_situation">学校状况</string>
+    <string name="schoolinfo_schools_departments">院系设置</string>
+    <string name="schoolinfo_education_teaching">教育教学</string>
+    <string name="schoolinfo_scientific_research">科学研究</string>
+
+    <!--柳  工具页面-->
+    <string name="tools_signin">签到</string>
+    <string name="tools_initiate_signin">发起签到</string>
+    <string name="tools_address_list">通讯录</string>
+    <string name="tools_class_schedule">课表</string>
+    <string name="tools_inquiry_signin">签到查询</string>
+    <string name="tools_my_bazar">我的义卖</string>
+    <string name="tools_ask_problem">问问</string>
+    <string name="tools_other">更多</string>
+    <string name="tools_score">成绩</string>
+
+    <!--柳  发起签到页面-->
+    <string name="initialsignin_top_navigation_left">临时</string>
+    <string name="initialsignin_top_navigation_right">日常</string>
+    <string name="initialsignin_top_signinscope_txt">签到范围:</string>
+    <string name="initialsignin_top_signinstime_txt">签到时间:</string>
+    <string name="initialsignin_top_signinspurpose_txt">签到目的:</string>
+    <string name="initialsignin_top_signinlocal_txt">签到地点:</string>
+    <string name="initialsignin_top_signinscope_twinty">20米</string>
+    <string name="initialsignin_top_signinscope_thirty">30米</string>
+    <string name="initialsignin_top_signinscope_forty">40米</string>
+    <string name="initialsignin_top_signintime_twinty">20分</string>
+    <string name="initialsignin_top_signintime_thirty">30分</string>
+    <string name="initialsignin_top_signintime_forty">40分</string>
+    <string name="initialsignin_top_signin_other">其他</string>
+    <string name="initialsignin_top_meter">米</string>
+    <string name="initialsignin_top_minute">分</string>
+    <string name="initialsignin_top_local_hint">请输入详细地址</string>
+
+
+
+</resources>

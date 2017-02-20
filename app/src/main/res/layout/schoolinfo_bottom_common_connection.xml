@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/one_height_item"
+    android:orientation="vertical"
+    android:background="@drawable/bg_schoolinfo_gradient_bg"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/four_height_item"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/three_margin_item"
+        android:gravity="center"
+        android:textSize="@dimen/medium_txt_size"
+        android:text="@string/schoolinfo_common_connection"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/three_margin_item"
+        android:layout_marginRight="@dimen/three_margin_item"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/five_height_item">
+        <TextView
+            style="@style/schoolinfo_bottom_common_connect_tv"
+            android:text="@string/schoolinfo_campus_train"/>
+        <TextView
+            style="@style/schoolinfo_bottom_common_connect_tv"
+            android:text="@string/schoolinfo_school_map"/>
+        <TextView
+            style="@style/schoolinfo_bottom_common_connect_tv"
+            android:text="@string/schoolinfo_peripheral_traffic"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/three_margin_item"
+        android:layout_marginRight="@dimen/three_margin_item"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/five_height_item">
+        <TextView
+            style="@style/schoolinfo_bottom_common_connect_tv"
+            android:text="@string/schoolinfo_campus_advertisement"/>
+        <TextView
+            style="@style/schoolinfo_bottom_common_connect_tv"
+            android:text="@string/schoolinfo_practical_information"/>
+        <TextView
+            style="@style/schoolinfo_bottom_common_connect_tv"
+            android:text="@string/schoolinfo_alumni_club"/>
+
+    </LinearLayout>
+</LinearLayout>

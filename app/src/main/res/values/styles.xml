@@ -1,0 +1,152 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!-- 春   学校信息网格布局列表-->
+
+    <style name="schoolinfo_top_grid_rb">
+        <item name="android:textSize">@dimen/minimum_txt_size</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/two_height_item</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/darkgray</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+    <!-- 春   学校信息常用的链接-->
+    <style name="schoolinfo_bottom_common_connect_tv">
+        <item name="android:textSize">@dimen/small_txt_size</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <!-- 春   完善个人信息-->
+    <style name="personal_info_text_style">
+        <item name="android:textSize">@dimen/medium_txt_size</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/four_height_item</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <style name="personal_info_edit_style">
+        <item name="android:textSize">@dimen/small_txt_size</item>
+        <item name="android:background">@drawable/input_info_edit_corners_bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/four_height_item</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:padding">@dimen/one_margin_item</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <!-- 春   学校詳細信息常用的链接-->
+    <style name="schoolinfo_bottom_school_details_tv">
+        <item name="android:textSize">@dimen/small_txt_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--    分割线-->
+    <style name="TextLine_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">@dimen/four_height_item</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+  <!--  返回键-->
+    <style name="back_style" >
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/three_margin_item</item>
+        <item name="android:layout_marginRight">@dimen/three_margin_item</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@android:dimen/app_icon_size</item>
+        <item name="android:padding">@dimen/one_margin_item</item>
+        <item name="android:src">@mipmap/back</item>
+    </style>
+
+    <!--柳 界面中权值为1的纵向布局-->
+    <style name="vertical_weight_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <!--柳 界面中权值为1的横向布局-->
+    <style name="horizontal_weight_1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <!--柳 工具页面几个按钮图片和文字的布局方式-->
+    <style name="toolspage_btn_picandtext">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/big_txt_size</item>
+        <item name="android:drawablePadding">@dimen/one_margin_item</item>
+    </style>
+
+    <!--临时列表item中textview style-->
+
+    <style name="temporary_ListItem_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/five_height_item</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/medium_txt_size</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">@dimen/one_margin_item</item>
+    </style>
+    <!--jyq-->
+
+    <!--柳 发起签到页面几个按钮选项的格式 redioButton-->
+    <style name="initialsigninpage_radiobutton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/one_margin_item</item>
+        <item name="android:paddingTop">@dimen/one_margin_item</item>
+        <item name="android:paddingLeft">@dimen/two_margin_item</item>
+        <item name="android:paddingRight">@dimen/two_margin_item</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+<!--极光推送的style-->
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:orientation="horizontal">
+
+    <RadioGroup
+        android:id="@+id/schoolinfo_top_radiogroup_rg"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/schoolinfo_top_netteach_rb"
+                style="@style/schoolinfo_top_grid_rb"
+                android:drawableTop="@mipmap/wangluojiaoxuezhongxin"
+                android:text="@string/schoolinfo_net_teaching" />
+
+            <RadioButton
+                android:id="@+id/schoolinfo_top_zhxg_rb"
+                style="@style/schoolinfo_top_grid_rb"
+                android:drawableTop="@mipmap/zhihuixuegong"
+                android:text="@string/schoolinfo_wisdom_teaching_engineering" />
+
+            <RadioButton
+                android:id="@+id/schoolinfo_top_netservice_rb"
+                style="@style/schoolinfo_top_grid_rb"
+                android:drawableTop="@mipmap/wangluofuwu"
+                android:gravity="center"
+                android:text="@string/schoolinfo_net_service" />
+
+            <RadioButton
+                android:id="@+id/schoolinfo_top_classrooom_rb"
+                style="@style/schoolinfo_top_grid_rb"
+                android:drawableTop="@mipmap/kongxianjiaoshi"
+                android:text="@string/schoolinfo_free_classroom" />
+
+            <RadioButton
+                android:id="@+id/schoolinfo_top_phone_rb"
+                style="@style/schoolinfo_top_grid_rb"
+                android:drawableTop="@mipmap/bangongdianhua"
+                android:text="@string/schoolinfo_office_phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/schoolinfo_top_classinfo_rb"
+                style="@style/schoolinfo_top_grid_rb"
+                android:drawableTop="@mipmap/kebiaoxinxi"
+                android:text="@string/schoolinfo_classinfo" />
+
+            <RadioButton
+                android:id="@+id/schoolinfo_top_scoresearch_rb"
+                style="@style/schoolinfo_top_grid_rb"
+                android:drawableTop="@mipmap/chengjichaxun"
+                android:text="@string/schoolinfo_score_search" />
+
+            <RadioButton
+                android:id="@+id/schoolinfo_top_yikatongfuwu_rb"
+                style="@style/schoolinfo_top_grid_rb"
+                android:drawableTop="@mipmap/yikatongfuwu"
+                android:gravity="center"
+                android:text="@string/schoolinfo_card_service" />
+
+            <RadioButton
+                android:id="@+id/schoolinfo_top_xiaoli_rb"
+                style="@style/schoolinfo_top_grid_rb"
+                android:drawableTop="@mipmap/xiaoli"
+                android:text="@string/schoolinfo_calendar" />
+
+            <RadioButton
+                android:id="@+id/schoolinfo_top_lixiao_rb"
+                style="@style/schoolinfo_top_grid_rb"
+                android:drawableTop="@mipmap/lixiaoshouxu"
+                android:text="@string/schoolinfo_graduation_procedures" />
+        </LinearLayout>
+    </RadioGroup>
+
+</LinearLayout>

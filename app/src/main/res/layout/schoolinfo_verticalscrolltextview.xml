@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/three_height_item"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/three_height_item"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:text="@string/schoolinfo_school_news"
+        android:textSize="@dimen/super_txt_size"/>
+
+    <com.wgc.mfaces.view.VerticalScrollTextView
+        android:id="@+id/schoolinfo_moddle_newslist_vstv"
+        android:layout_width="0dp"
+       android:layout_weight="3"
+        android:layout_height="match_parent" />
+
+
+
+</LinearLayout>

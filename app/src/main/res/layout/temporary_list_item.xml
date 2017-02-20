@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/oneanntwo_height_item"
+        android:layout_marginBottom="@dimen/one_margin_item"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/one_margin_item"
+        android:background="@color/green_background"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin">
+        <!--left-->
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                style="@style/temporary_ListItem_textview"
+                android:text="发起人：李思思"/>
+            <TextView
+                android:id="@+id/time"
+                style="@style/temporary_ListItem_textview"
+                android:text="时间：08：:00"/>
+            <TextView
+                android:id="@+id/place"
+                style="@style/temporary_ListItem_textview"
+                android:layout_gravity="bottom"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:focusable="true"
+                android:scrollHorizontally="true"
+                android:focusableInTouchMode="true"
+                android:text="地点：河南科技大学西苑校区足球场"/>
+        </LinearLayout>
+        <!-- right-->
+        <!--按钮和时间-->
+        <RelativeLayout
+            android:id="@+id/buttonPanel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible">
+            <Button
+                android:id="@+id/signin_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/two_margin_item"
+                android:background="@color/orange_bt"
+                android:text="签到"
+                android:textColor="@color/white"
+                android:textSize="@dimen/super_txt_size"/>
+            <TextView
+                android:id="@+id/purpose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/signin_button"
+                android:layout_below="@id/signin_button"
+                android:layout_marginTop="@dimen/purposetv_marginTop"
+                android:text="目的：开会"
+                android:textSize="@dimen/medium_txt_size"/>
+
+            <TextView
+                android:id="@+id/returnTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/signin_button"
+                android:layout_below="@id/purpose"
+                android:layout_marginTop="@dimen/one_margin_item"
+                android:text="剩余：00:08:30"
+                android:textSize="@dimen/medium_txt_size"/>
+
+        </RelativeLayout>
+        <!--图片-->
+        <RelativeLayout
+            android:id="@+id/imgPanel"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/signature"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/four_height_item"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:src="@mipmap/signinlist_success"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
+               android:layout_marginLeft="@dimen/activity_horizontal_margin"
+               android:layout_marginRight="@dimen/activity_horizontal_margin"
+               android:background="@mipmap/line"/>
+</LinearLayout>
