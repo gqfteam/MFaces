@@ -12,8 +12,8 @@ import okhttp3.OkHttpClient;
 public class MyApplication extends Application
 {
     public static String JPtag="";
-    public static String master_Secret = "70015daccd1199ea1e3e6908";
-    public static  String appKey = "d6bc13c34d4ce9409c402b02";
+    public static String master_Secret = "df28ac8cc76b4a43daa68fca";
+    public static  String appKey = "8a867f6ac13f0d52eb6017f3";
     @Override
     public void onCreate()
     {
