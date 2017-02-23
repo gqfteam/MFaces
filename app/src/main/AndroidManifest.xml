@@ -89,7 +89,7 @@
         </activity>
 
 
-            <!--极光推送的配置开始-->
+        <!--极光推送的配置开始-->
         <!-- Required SDK 核心功能-->
         <!-- 可配置android:process参数将PushService放在其他进程中 -->
         <service
@@ -127,7 +127,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-               
+
             </intent-filter>
             <!-- Optional -->
             <intent-filter>
@@ -150,11 +150,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.InitiateSigninActivity"/>
-         <activity android:name=".activity.SigninListActivity"/>
+        <activity android:name=".activity.SigninListActivity"/>
         <activity android:name=".activity.CameraPreviewActivity"/>
         <activity android:name=".activity.JpushActivity"/>
         <activity android:name=".activity.TestDemo"/>
-        
+
         <!-- Required SDK核心功能-->
         <service
             android:name="cn.jpush.android.service.DownloadService"
@@ -183,7 +183,11 @@
                 <category android:name="com.wgc.mfaces" />
             </intent-filter>
         </receiver>
-
+        <!--百度-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
         <!-- Required. For publish channel feature -->
         <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。-->
         <!-- 例如: -->
@@ -193,7 +197,10 @@
         <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
         <!-- Required. AppKey copied from Portal -->
         <meta-data android:name="JPUSH_APPKEY" android:value="8a867f6ac13f0d52eb6017f3"/>
-
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="azeXyaYAr4OCYrhmi53EYD3W" />
+        <!-- Required -->
 
         <!--极光推送的配置结束-->
 

@@ -1,4 +1,4 @@
-package com.wgc.mfaces.activity;
+package com.wgc.mfaces.model;
 
 /**
  * Created by Administrator on 2016/12/11.

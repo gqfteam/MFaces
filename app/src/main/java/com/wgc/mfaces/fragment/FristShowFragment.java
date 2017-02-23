@@ -5,10 +5,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -49,63 +53,64 @@ import okhttp3.Response;
  * Created by Administrator on 2017/1/29.
  */
 public class FristShowFragment  extends Fragment{
-    View mview;
-    @Bind(R.id.schoolinfo_ScrollView)
-    ScrollView mSchoolinfoScrollView;
-    @Bind(R.id.schoolinfo_top_address_tv)
-    TextView schoolinfoTopAddressTv;
-    @Bind(R.id.schoolinfo_top_address_iv)
-    ImageView schoolinfoTopAddressIv;
-    @Bind(R.id.schoolinfo_top_search_sv)
-    SearchView schoolinfoTopSearchSv;
-    @Bind(R.id.schoolinfo_top_qcord_iv)
-    ImageView schoolinfoTopQcordIv;
-    @Bind(R.id.schoolinfo_top_chat_iv)
-    ImageView mSchoolinfoTopChatIv;
-    @Bind(R.id.schoolinfo_top_carousel_cv)
-    CarouselView mSchoolinfoTopCarouselCv;
-    @Bind(R.id.schoolinfo_top_netteach_rb)
-    RadioButton schoolinfoTopNetteachRb;
-    @Bind(R.id.schoolinfo_top_zhxg_rb)
-    RadioButton schoolinfoTopZhxgRb;
-    @Bind(R.id.schoolinfo_top_netservice_rb)
-    RadioButton schoolinfoTopNetserviceRb;
-    @Bind(R.id.schoolinfo_top_classrooom_rb)
-    RadioButton schoolinfoTopClassrooomRb;
-    @Bind(R.id.schoolinfo_top_phone_rb)
-    RadioButton schoolinfoTopPhoneRb;
-    @Bind(R.id.schoolinfo_top_classinfo_rb)
-    RadioButton schoolinfoTopClassinfoRb;
-    @Bind(R.id.schoolinfo_top_scoresearch_rb)
-    RadioButton schoolinfoTopScoresearchRb;
-    @Bind(R.id.schoolinfo_top_yikatongfuwu_rb)
-    RadioButton schoolinfoTopYikatongfuwuRb;
-    @Bind(R.id.schoolinfo_top_xiaoli_rb)
-    RadioButton schoolinfoTopXiaoliRb;
-    @Bind(R.id.schoolinfo_top_lixiao_rb)
-    RadioButton schoolinfoTopLixiaoRb;
-    @Bind(R.id.schoolinfo_top_radiogroup_rg)
-    RadioGroup schoolinfoTopRadiogroupRg;
-    /* @Bind(R.id.schoolinfo_moddle_newslist_vstv)*/
+    View mView;
+    /* @Bind(R.id.schoolinfo_ScrollView)
+     ScrollView mSchoolinfoScrollView;
+     @Bind(R.id.schoolinfo_top_address_tv)
+     TextView schoolinfoTopAddressTv;
+     @Bind(R.id.schoolinfo_top_address_iv)
+     ImageView schoolinfoTopAddressIv;
+     @Bind(R.id.schoolinfo_top_search_sv)
+     SearchView schoolinfoTopSearchSv;
+     @Bind(R.id.schoolinfo_top_qcord_iv)
+     ImageView schoolinfoTopQcordIv;
+     @Bind(R.id.schoolinfo_top_chat_iv)
+     ImageView mSchoolinfoTopChatIv;
+     @Bind(R.id.schoolinfo_top_carousel_cv)
+     CarouselView mSchoolinfoTopCarouselCv;
+     @Bind(R.id.schoolinfo_top_netteach_rb)
+     RadioButton schoolinfoTopNetteachRb;
+     @Bind(R.id.schoolinfo_top_zhxg_rb)
+     RadioButton schoolinfoTopZhxgRb;
+     @Bind(R.id.schoolinfo_top_netservice_rb)
+     RadioButton schoolinfoTopNetserviceRb;
+     @Bind(R.id.schoolinfo_top_classrooom_rb)
+     RadioButton schoolinfoTopClassrooomRb;
+     @Bind(R.id.schoolinfo_top_phone_rb)
+     RadioButton schoolinfoTopPhoneRb;
+     @Bind(R.id.schoolinfo_top_classinfo_rb)
+     RadioButton schoolinfoTopClassinfoRb;
+     @Bind(R.id.schoolinfo_top_scoresearch_rb)
+     RadioButton schoolinfoTopScoresearchRb;
+     @Bind(R.id.schoolinfo_top_yikatongfuwu_rb)
+     RadioButton schoolinfoTopYikatongfuwuRb;
+     @Bind(R.id.schoolinfo_top_xiaoli_rb)
+     RadioButton schoolinfoTopXiaoliRb;
+     @Bind(R.id.schoolinfo_top_lixiao_rb)
+     RadioButton schoolinfoTopLixiaoRb;
+     @Bind(R.id.schoolinfo_top_radiogroup_rg)
+     RadioGroup schoolinfoTopRadiogroupRg;
+     *//* @Bind(R.id.schoolinfo_moddle_newslist_vstv)*//*
     VerticalScrollTextView mNewListVerticalScrollTextView;
     //设置listview数据
     @Bind(R.id.schoolinfo_moddle_infolist_lv)
-    ListView schoolinfoModdleInfolistLv;
-
+    ListView schoolinfoModdleInfolistLv;*/
+    WebView webview;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mview = inflater.inflate(R.layout.fragment_school_info, container, false);
-        ButterKnife.bind(this, mview);
-        mNewListVerticalScrollTextView = (VerticalScrollTextView) mview.findViewById(R.id.schoolinfo_moddle_newslist_vstv);
+        mView = inflater.inflate(R.layout.webview_layout, container, false);
+        webview = (WebView) mView.findViewById(R.id.webview);
+        ButterKnife.bind(this, mView);
+        //  mNewListVerticalScrollTextView = (VerticalScrollTextView) mview.findViewById(R.id.schoolinfo_moddle_newslist_vstv);
         initDisplay();
 
-        return mview;
+        return mView;
 
     }
 
-    /*初始化数据*/
+  /*  *//*初始化数据*//*
     public void initDatas() {
         mSchoolinfoTopCarouselCv.setImagesRes(Constant.FieldImage);
         //初始话列表数据
@@ -113,22 +118,49 @@ public class FristShowFragment  extends Fragment{
 
 
 
-    }
+    }*/
 
 
 
     /*初始化显示信息*/
     public void initDisplay() {
-        initDatas();
-       // mSchoolinfoScrollView.setOnTouchListener(new TouchListenerImpl());
-    }
 
+        WebSettings webSettings = webview.getSettings();
+        //设置WebView属性，能够执行Javascript脚本
+        webSettings.setJavaScriptEnabled(true);
+        //设置可以访问文件
+        webSettings.setAllowFileAccess(true);
+        //设置支持缩放
+        webSettings.setBuiltInZoomControls(true);
+        //加载需要显示的网页
+        webview.loadUrl("file:///android_asset/hkd/main.html");
+        //设置Web视图
+        // webview.setWebViewClient(new webViewClient ());
+
+
+        //initDatas();
+        // mSchoolinfoScrollView.setOnTouchListener(new TouchListenerImpl());
+    }
+    //Web视图
+
+
+    //设置回退
+    //覆盖Activity类的onKeyDown(int keyCoder,KeyEvent event)方法
+ /*   @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && webview.canGoBack()) {
+            webview.goBack(); //goBack()表示返回WebView的上一页面
+            return true;
+        }
+
+        return false;
+    }*/
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
     }
-
+/*
     @OnClick({R.id.schoolinfo_top_address_tv, R.id.schoolinfo_top_address_iv, R.id.schoolinfo_top_search_sv, R.id.schoolinfo_top_chat_iv, R.id.schoolinfo_top_carousel_cv, R.id.schoolinfo_top_netteach_rb, R.id.schoolinfo_top_zhxg_rb, R.id.schoolinfo_top_netservice_rb, R.id.schoolinfo_top_classrooom_rb, R.id.schoolinfo_top_phone_rb, R.id.schoolinfo_top_classinfo_rb, R.id.schoolinfo_top_scoresearch_rb, R.id.schoolinfo_top_yikatongfuwu_rb, R.id.schoolinfo_top_xiaoli_rb, R.id.schoolinfo_top_lixiao_rb, R.id.schoolinfo_top_radiogroup_rg})
     public void onClick(View view) {
         switch (view.getId()) {
@@ -168,9 +200,9 @@ public class FristShowFragment  extends Fragment{
         }
     }
 
-    /**
+    *//*//***//*
      * 新闻设置滚动条的数据
-     */
+     *//*
     public void initNewsList() {
         Log.d("TAG","开始请求数据");
         Log.d("TAG",Constant.getNewsList__URL);
@@ -189,7 +221,7 @@ public class FristShowFragment  extends Fragment{
                 NewsListAdapter adapter=new NewsListAdapter(getActivity(),data);
                 schoolinfoModdleInfolistLv.setAdapter(adapter);
 
-             /*   List lst = new ArrayList<Sentence>();
+             *//*   List lst = new ArrayList<Sentence>();
                 if (data.size() > 3) {
                     for (int i = 0; i < 3; i++) {
                         Sentence sen = new Sentence(i, i + "、" + data.get(i).getNewsTitle());
@@ -207,7 +239,7 @@ public class FristShowFragment  extends Fragment{
 
                 mNewListVerticalScrollTextView.setList(lst);
                 //更新View
-                mNewListVerticalScrollTextView.updateUI();/*//**/
+                mNewListVerticalScrollTextView.updateUI();*//*//**//**//*
 
 
             }
@@ -217,7 +249,7 @@ public class FristShowFragment  extends Fragment{
 
             }
         });
-        /*OkHttpUtils.post().url(Constant.getNewsList__URL).build().execute(new StringCallback() {
+        *//*OkHttpUtils.post().url(Constant.getNewsList__URL).build().execute(new StringCallback() {
             @Override
             public void onError(Call call, Exception e, int id) {
                 Log.d("TAG","请求失败");
@@ -253,12 +285,12 @@ public class FristShowFragment  extends Fragment{
 
                 mNewListVerticalScrollTextView.setList(lst);
                 //更新View
-                mNewListVerticalScrollTextView.updateUI();/*//*
+                mNewListVerticalScrollTextView.updateUI();*//*//**//*
             }
-        });*/
+        });*//*
 
 
-/*
+*//*
 //创建okHttpClient对象
         OkHttpClient mOkHttpClient = new OkHttpClient();
 //创建一个Request
@@ -304,14 +336,14 @@ public class FristShowFragment  extends Fragment{
 
                 mNewListVerticalScrollTextView.setList(lst);
                 //更新View
-                mNewListVerticalScrollTextView.updateUI();/*/
-/*
+                mNewListVerticalScrollTextView.updateUI();*//*//*
+*//*
             }
 
 
         });
 
-*/
+
 
 
        //
@@ -323,7 +355,7 @@ public class FristShowFragment  extends Fragment{
 
         //设置新闻列表
     }
-
+*/
     /**
      * 设置ScrollVie滚动的监听时间
      */
@@ -373,5 +405,10 @@ public class FristShowFragment  extends Fragment{
     }*/
 
     ;
-
+    private class webViewClient extends WebViewClient {
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
+    }
 }

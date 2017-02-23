@@ -26,6 +26,7 @@ package com.wgc.mfaces.activity;
         import com.baidu.location.Poi;
         import com.google.gson.Gson;
         import com.wgc.mfaces.R;
+        import com.wgc.mfaces.model.InitiateSigninMsg;
         import com.wgc.mfaces.application.MyApplication;
 
         import java.util.ArrayList;

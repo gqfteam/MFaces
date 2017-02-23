@@ -16,6 +16,7 @@ import com.baidu.location.LocationClientOption;
 import com.baidu.location.Poi;
 import com.google.gson.Gson;
 import com.wgc.mfaces.R;
+import com.wgc.mfaces.model.InitiateSigninMsg;
 import com.wgc.mfaces.application.MyApplication;
 import com.wgc.mfaces.receiver.JpushReceiver;
 
