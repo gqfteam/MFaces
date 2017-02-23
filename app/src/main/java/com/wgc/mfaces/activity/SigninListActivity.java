@@ -1,14 +1,12 @@
 package com.wgc.mfaces.activity;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-
 
 import com.wgc.mfaces.R;
 import com.wgc.mfaces.fragment.DailyListFragment;
@@ -71,43 +69,38 @@ public class SigninListActivity extends FragmentActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.signinList_top_temporary_radioButton:
-
                 isSignintRad=true;
-                if (temporaryListFragment != null) {
-                    showFragment(temporaryListFragment);
-                } else {
+                if (temporaryListFragment == null) {
                     temporaryListFragment = new TemporaryListFragment();
-                    getSupportFragmentManager().beginTransaction()
-                            .add(R.id.signinlist, temporaryListFragment).commit();
                 }
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.signinlist, temporaryListFragment).commit();
                 break;
             case R.id.signinList_top_daily_radioButton:
 
                 isSignintRad=false;
-                if (dailyListFragment != null) {
-                    showFragment(dailyListFragment);
-                } else {
+                if (dailyListFragment == null) {
                     dailyListFragment = new DailyListFragment();
-                    getSupportFragmentManager().beginTransaction()
-                            .add(R.id.signinlist, dailyListFragment).commit();
                 }
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.signinlist, dailyListFragment).commit();
                 break;
         }
     }
-    private void showFragment(Fragment index) {
-        ft = getSupportFragmentManager().beginTransaction();
-
-        for (int i = 0; i < getSupportFragmentManager().getFragments().size(); i++) {
-            Fragment f = getSupportFragmentManager().getFragments().get(i);
-            if (f == index) {
-                ft.show(f);
-            } else {
-                ft.hide(f);
-            }
-
-        }
-        ft.commit();
-    }
+//    private void showFragment(Fragment index) {
+//        ft = getSupportFragmentManager().beginTransaction();
+//
+//        for (int i = 0; i < getSupportFragmentManager().getFragments().size(); i++) {
+//            Fragment f = getSupportFragmentManager().getFragments().get(i);
+//            if (f == index) {
+//                ft.show(f);
+//            } else {
+//                ft.hide(f);
+//            }
+//
+//        }
+//        ft.commit();
+//    }
 
     @Override
     protected void onDestroy() {

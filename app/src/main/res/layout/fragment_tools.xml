@@ -64,15 +64,22 @@
                android:background="@color/translucentWhite"
                >
                <RelativeLayout
+                   android:id="@+id/singIn_relative"
                    style="@style/horizontal_weight_1"
                    android:gravity="center"
                    >
-                 <TextView
-                     style="@style/toolspage_btn_picandtext"
-                     android:text="@string/tools_signin"
-                     android:drawableTop="@mipmap/stu_signin_pic"
-                     android:textColor="@color/lightblue"
-                     />
+
+                   <TextView
+                       style="@style/toolspage_btn_picandtext"
+                       android:text="@string/tools_signin"
+                       android:drawableTop="@mipmap/stu_signin_pic"
+                       android:textColor="@color/lightblue"
+                       android:layout_centerVertical="true"
+                       android:layout_alignParentLeft="true"
+                       android:layout_alignParentStart="true"
+                       android:layout_marginLeft="27dp"
+                       android:layout_marginStart="27dp"
+                       android:id="@+id/textView"/>
                </RelativeLayout>
                <TextView
                    android:layout_width="1dp"

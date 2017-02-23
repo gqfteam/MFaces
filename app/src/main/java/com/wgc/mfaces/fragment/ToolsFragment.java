@@ -1,19 +1,18 @@
 package com.wgc.mfaces.fragment;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-
 import com.wgc.mfaces.R;
 import com.wgc.mfaces.activity.InitiateSigninActivity;
+import com.wgc.mfaces.activity.SignInActivity;
 import com.wgc.mfaces.activity.SigninListActivity;
-
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -25,68 +24,44 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
     RelativeLayout initialSignin_Relative, inquiry_Signin_Relative;
     @Bind(R.id.toolsf_middle_inquiry_goods_relative)
     RelativeLayout toolsfMiddleInquiryGoodsRelative;
+    @Bind(R.id.singIn_relative)
+    RelativeLayout singInRelative;
+    @Bind(R.id.toolsf_middle_initialsignin_relative)
+    RelativeLayout toolsfMiddleInitialsigninRelative;
+    @Bind(R.id.toolsf_middle_inquiry_signin_relative)
+    RelativeLayout toolsfMiddleInquirySigninRelative;
     private Intent mIntent;
 
-    public interface mListener {
-        public void changeActivity(
-                @SuppressWarnings("rawtypes") Class activityClass);
+    @OnClick({R.id.singIn_relative, R.id.toolsf_middle_initialsignin_relative, R.id.toolsf_middle_inquiry_signin_relative})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.singIn_relative:
+                //签到
+                Log.e("Daniel", "---singIn_relative-----");
+                startActivity(new Intent(getActivity(), SignInActivity.class));
+                break;
+            case R.id.toolsf_middle_initialsignin_relative:
+                //发起签到
+                startActivity(new Intent(getActivity(), InitiateSigninActivity.class));
+                break;
+            case R.id.toolsf_middle_inquiry_signin_relative:
+                //查找签到列表
+                startActivity(new Intent(getActivity(), SigninListActivity.class));
+                break;
+        }
     }
 
-  //  private SaleFragemnt.mListener mListener;
 
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-   //     mListener = (SaleFragemnt.mListener) activity;
-
-    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         toolsView = inflater.inflate(R.layout.fragment_tools, container, false);
-        init();
-        addListener();
         ButterKnife.bind(this, toolsView);
         return toolsView;
     }
 
-    /**
-     * 初始化组件
-     */
-    private void init() {
-        initialSignin_Relative = (RelativeLayout) toolsView.findViewById(R.id.toolsf_middle_initialsignin_relative);
-        inquiry_Signin_Relative = (RelativeLayout) toolsView.findViewById(R.id.toolsf_middle_inquiry_signin_relative);
-    }
-
-    /**
-     * 给组件添加事件
-     */
-    public void addListener() {
-        initialSignin_Relative.setOnClickListener(this);
-        inquiry_Signin_Relative.setOnClickListener(this);
-    }
 
 
-    /**
-     * 组件的点击事件
-     *
-     * @param v
-     */
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.toolsf_middle_initialsignin_relative:
-                //发起签到
-                startActivity(new Intent(getActivity(),InitiateSigninActivity.class));
-               // mListener.changeActivity(InitiateSigninActivity.class);
-                break;
-            case R.id.toolsf_middle_inquiry_signin_relative:
-                //查找签到列表
-                startActivity(new Intent(getActivity(),SigninListActivity.class));
-              //  mListener.changeActivity(SigninListActivity.class);
-                break;
-
-        }
-    }
 
 
     @Override
@@ -95,10 +70,5 @@ public class ToolsFragment extends Fragment implements View.OnClickListener {
         ButterKnife.unbind(this);
     }
 
-    @OnClick(R.id.toolsf_middle_inquiry_goods_relative)
-    public void onClick() {
-       //我的义卖
-        // mListener.changeActivity(UserSaleListActivity.class);
 
-    }
 }

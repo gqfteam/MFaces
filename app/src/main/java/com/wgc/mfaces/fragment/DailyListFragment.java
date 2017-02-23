@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-
 import com.wgc.mfaces.R;
+import com.wgc.mfaces.adapter.DailyListAdapter;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -28,6 +28,9 @@ public class DailyListFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_daily_list, container, false);
         ButterKnife.bind(this, view);
+
+        DailyListAdapter dailyListAdapter = new DailyListAdapter(getActivity());
+        dailyList.setAdapter(dailyListAdapter);
         return view;
     }
 
