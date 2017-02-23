@@ -18,7 +18,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends FragmentActivity {
-    //lyt
 
     FragmentManager fragmentManager = getSupportFragmentManager();
 
