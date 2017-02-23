@@ -18,6 +18,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends FragmentActivity {
+    //lll
+
     FragmentManager fragmentManager = getSupportFragmentManager();
 
     FragmentTransaction fragmentTransaction;
