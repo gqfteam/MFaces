@@ -54,6 +54,7 @@ import okhttp3.Response;
  */
 public class FristShowFragment  extends Fragment{
     View mView;
+    //
     /* @Bind(R.id.schoolinfo_ScrollView)
      ScrollView mSchoolinfoScrollView;
      @Bind(R.id.schoolinfo_top_address_tv)
